@@ -1,0 +1,95 @@
+/* Navbar Container */
+.navbar {
+  background-color: rgba(244, 67, 54, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin: 8px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo>img {
+  width: 175px;
+}
+
+/* Navigation Elements Container */
+.nav-elements {
+  width: auto;
+  display: flex;
+  gap: 15px;
+}
+
+/* Navigation Link */
+.nav-link {
+  background-color: white;
+  height: 50px;
+  width: 75px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 3px;
+  padding-left: 5px;
+}
+
+/* Navigation Link Text */
+.nav-link>a {
+  text-decoration: none;
+  color: rgb(61, 51, 51);
+  text-align: center;
+  font-size: 25px;
+}
+
+/* Pokemon Images */
+.pokemon-image {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 2px;
+  right: 110px;
+}
+
+/* Bulbasaur Position */
+.bulbasaur {
+  right: 15px;
+}
+
+/* Pokemon Image Animation on Hover */
+.nav-link:hover .pokemon-image {
+  animation: pokemon_animation 1s both;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Keyframes */
+@keyframes pokemon_animation {
+
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
