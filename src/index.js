@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { QueryClient, QueryClientProvider } from "react-query";
+
 import "../src/css/index.css";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/PokemonSidebar";
 
+const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function App() {
@@ -18,7 +21,7 @@ function App() {
 }
 
 root.render(
-  <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
     <App />
-  </React.StrictMode>
+  </QueryClientProvider>
 );

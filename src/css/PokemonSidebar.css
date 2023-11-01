@@ -1,4 +1,4 @@
-.poke-card {
+/* .poke-card {
   height: 70px;
   display: flex;
   align-items: center;
@@ -8,7 +8,9 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   font-family: "Pokemon Solid";
+  position: relative;
 }
+
 
 .poke-card:hover {
   transform: translateY(-5px);
@@ -31,9 +33,59 @@
 
 .poke-card>img {
   position: relative;
-  max-width: 50px;
-  max-height: 50px;
-  border-radius: 5px;
-  padding: 5px;
-  margin-right: 10px;
+} */
+
+
+
+.pokemon-list {
+  flex-grow: 1;
+  overflow-y: scroll;
+  height: 550px;
+  background-color: aqua;
+}
+
+
+
+
+
+
+/* pagination buttons css */
+.button {
+  background-color: #d6c065;
+  border: 2px solid #422800;
+  width: 100px;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #423800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.buttons_container {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.button:hover {
+  background-color: #fff;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  border: 2px solid #999;
+  color: #999;
+  cursor: not-allowed;
 }
