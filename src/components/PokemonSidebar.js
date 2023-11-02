@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
+import Color from "color-thief-react";
+import bulbasaur from "../images/bulbasaur.png";
 
 import "../css/PokemonSidebar.css";
 
 export function Sidebar() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [primaryColour, setPrimaryColour] = useState("#FFFFFF");
   const limit = 25;
   const offset = (currentPage - 1) * limit;
 
@@ -75,10 +78,26 @@ export function Sidebar() {
         {!isLoading &&
           pokemonData &&
           pokemonData.map((pokemon) => (
-            <div key={pokemon.id} className="pokemon">
-              <p>{pokemon.id}</p>
-              <p>{pokemon.name}</p>
-            </div>
+            <Color
+              src={pokemon.sprites.front_default}
+              format="hex"
+              key={pokemon.id}
+              crossOrigin="anonymous"
+            >
+              {({ data: colourData, loading, error }) => (
+                <div
+                  className="poke-card"
+                  style={{
+                    background: `linear-gradient(to left, ${colourData} 0%, transparent 90%)`,
+                  }}
+                  crossOrigin="anonymous"
+                >
+                  <p className="poke-id">#{pokemon.id}</p>
+                  <img src={pokemon.sprites.front_default} alt="" />
+                  <p className="poke-name">{pokemon.name}</p>
+                </div>
+              )}
+            </Color>
           ))}
       </div>
       <PaginationButtons />

@@ -12,6 +12,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 function App() {
   return (
     <div>
+      <div className="background-container"></div>
+      <div className="overlay"></div>
       <Navbar />
       <div className="sidebar">
         <Sidebar />
