@@ -15,12 +15,12 @@ export function Navbar() {
         <NavItem
           imgSrc={require("../images/pikachu_sitting.png")}
           linkText="Home"
-          className="pokemon-image"
+          className="navbar-pokemon-image"
         />
         <NavItem
           imgSrc={require("../images/bulbasaur.png")}
           linkText="About"
-          className="pokemon-image bulbasaur"
+          className="navbar-pokemon-image bulbasaur"
         />
       </div>
     </nav>
