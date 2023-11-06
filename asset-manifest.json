@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.062c324e.css",
+    "main.js": "/static/js/main.e1c2e383.js",
+    "static/media/21007.png": "/static/media/21007.88ebd66fc4eb590a24c8.png",
+    "static/media/pokemon-logo-png-1421.png": "/static/media/pokemon-logo-png-1421.c0e5afc218768d952af6.png",
+    "static/media/bulbasaur.png": "/static/media/bulbasaur.eb0825ae453715fb20c6.png",
+    "static/media/Pokemon_Hollow.ttf": "/static/media/Pokemon_Hollow.47f77ce9939c5330492b.ttf",
+    "static/media/pikachu_sitting.png": "/static/media/pikachu_sitting.c98128de23d73846b862.png",
+    "static/media/Pokemon_Solid.ttf": "/static/media/Pokemon_Solid.5d60be1f7ff5fcc21fc1.ttf",
+    "index.html": "/index.html",
+    "main.062c324e.css.map": "/static/css/main.062c324e.css.map",
+    "main.e1c2e383.js.map": "/static/js/main.e1c2e383.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.062c324e.css",
+    "static/js/main.e1c2e383.js"
+  ]
+}
