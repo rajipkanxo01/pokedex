@@ -20,19 +20,14 @@ export function PokemonInfo({ pokeId }) {
             <p>{pokemon.name}</p>
           </div>
           <div className="image-container">
-            <img
+            {/* <img
               className="pokemon-image"
               src={pokemon.sprites.back_default}
               alt=""
-            />
+            /> */}
             <img
               className="pokemon-image"
-              src={pokemon.sprites.front_default}
-              alt=""
-            />
-            <img
-              className="pokemon-image"
-              src={pokemon.sprites.front_female}
+              src={pokemon.sprites.other["official-artwork"].front_default}
               alt=""
             />
           </div>
