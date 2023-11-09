@@ -20,7 +20,7 @@ function App() {
     <div>
       <BackgroundContainer />
       <Overlay />
-      <Navbar />
+      {/* <Navbar /> */}
       <Body pokemonId={pokemonId} handleCardClick={handleCardClick} />
     </div>
   );

@@ -84,7 +84,7 @@
 /* Buttons Container Styles */
 .buttons-container {
   position: sticky;
-  bottom: 0;
+  bottom: 2px;
   padding: 10px;
 }
 
