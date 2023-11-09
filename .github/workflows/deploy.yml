@@ -2,34 +2,26 @@ name: Deploy
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      pages: write
-      id-token: write
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
-      - name: setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-      - name: install dependencies
-        run: npm ci
-      - name: build app
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
         run: npm run build
-        env:
-          PUBLIC_URL: /pokedex
-      - name: upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./build
-      - name: deploy to github pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.name 
+          git config --global user.email 
+          git remote set-url origin https://${{ secrets.DEPLOY_TO_GITHUB_PAGE }}@github.com/${{ secrets.REPOSITORY }}
+          npm run deploy
