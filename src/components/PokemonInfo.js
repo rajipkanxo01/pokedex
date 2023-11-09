@@ -38,6 +38,7 @@ export function PokemonInfo({ pokeId }) {
       )}
     </div>
 */
+    /* */
 
     <div className="pokemoninfo-container">
       {isLoading && <p>Loading......</p>} {isError && <p>Error......</p>}
