@@ -4,7 +4,6 @@ import Color from "color-thief-react";
 import "../css/PokemonSidebar.css";
 
 import Button from "@mui/material/Button";
-import DeleteIcon from "@mui/icons-material/Delete";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Stack from "@mui/material/Stack";
