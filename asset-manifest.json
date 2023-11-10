@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/pokedex/static/css/main.526c581d.css",
-    "main.js": "/pokedex/static/js/main.14d31821.js",
+    "main.css": "/pokedex/static/css/main.8cf05706.css",
+    "main.js": "/pokedex/static/js/main.dddb7ac9.js",
     "static/media/21007.png": "/pokedex/static/media/21007.88ebd66fc4eb590a24c8.png",
     "static/media/pokemon-logo-png-1421.png": "/pokedex/static/media/pokemon-logo-png-1421.c0e5afc218768d952af6.png",
     "static/media/bulbasaur.png": "/pokedex/static/media/bulbasaur.eb0825ae453715fb20c6.png",
     "static/media/pokephone.png": "/pokedex/static/media/pokephone.cac91306de1d7b91d1f1.png",
+    "static/media/Ash.png": "/pokedex/static/media/Ash.44e3888fb43c1de39adf.png",
     "static/media/Pokemon_Hollow.ttf": "/pokedex/static/media/Pokemon_Hollow.47f77ce9939c5330492b.ttf",
     "static/media/pikachu_sitting.png": "/pokedex/static/media/pikachu_sitting.c98128de23d73846b862.png",
     "static/media/Pokemon_Solid.ttf": "/pokedex/static/media/Pokemon_Solid.5d60be1f7ff5fcc21fc1.ttf",
     "index.html": "/pokedex/index.html",
-    "main.526c581d.css.map": "/pokedex/static/css/main.526c581d.css.map",
-    "main.14d31821.js.map": "/pokedex/static/js/main.14d31821.js.map"
+    "main.8cf05706.css.map": "/pokedex/static/css/main.8cf05706.css.map",
+    "main.dddb7ac9.js.map": "/pokedex/static/js/main.dddb7ac9.js.map"
   },
   "entrypoints": [
-    "static/css/main.526c581d.css",
-    "static/js/main.14d31821.js"
+    "static/css/main.8cf05706.css",
+    "static/js/main.dddb7ac9.js"
   ]
 }
