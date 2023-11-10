@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@300;400&display=swap');
+
+.about-container {
+  z-index: 4;
+  width: 1200px;
+  display: flex;
+  margin: 0;
+}
+
+.parent-container {
+  background-color: #040C15;
+  height: 550px;
+  width: 1100px;
+  z-index: 9;
+  opacity: 0.8;
+  margin: auto;
+  position: relative;
+  left: 200px;
+  border-radius: 20px;
+  display: flex;
+  gap: 5px;
+  border: 3px solid #307AD5;
+}
+
+.textbox {
+  flex: 1;
+  color: #DDE9F8;
+  line-height: 30px;
+  font-family: 'Poppins';
+  padding: 10px;
+}
+
+.ash-image {
+  padding: 20px;
+}
