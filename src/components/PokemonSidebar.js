@@ -3,6 +3,12 @@ import { useQuery } from "react-query";
 import Color from "color-thief-react";
 import "../css/PokemonSidebar.css";
 
+import Button from "@mui/material/Button";
+import DeleteIcon from "@mui/icons-material/Delete";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Stack from "@mui/material/Stack";
+
 export function Sidebar({ handleClick }) {
   const [currentPage, setCurrentPage] = useState(1);
   const limit = 25;
@@ -74,16 +80,26 @@ export function Sidebar({ handleClick }) {
 function PaginationButtons({ handlePrevious, handleNext, currentPage }) {
   return (
     <div className="buttons_container">
-      <button
-        onClick={handlePrevious}
-        disabled={currentPage === 1}
-        className="button"
-      >
-        Prev
-      </button>
-      <button onClick={handleNext} className="button">
-        Next
-      </button>
+      <Stack direction="row" spacing={25}>
+        <Button
+          variant="contained"
+          startIcon={<ArrowBackIcon />}
+          onClick={handlePrevious}
+          disabled={currentPage === 1}
+          color="primary"
+          className="button"
+        >
+          Prev
+        </Button>
+        <Button
+          variant="contained"
+          endIcon={<ArrowForwardIcon />}
+          onClick={handleNext}
+          className="button"
+        >
+          Next
+        </Button>
+      </Stack>
     </div>
   );
 }

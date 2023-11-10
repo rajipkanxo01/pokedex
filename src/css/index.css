@@ -61,10 +61,3 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-
-/* Sidebar Styles */
-.sidebar {
-  display: flex;
-  justify-content: flex-end;
-  margin-left: 10px;
-}

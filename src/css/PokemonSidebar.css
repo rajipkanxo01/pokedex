@@ -49,8 +49,7 @@
   width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  row-gap: 8px;
+  row-gap: 3px;
 }
 
 .pokemon-list {
@@ -58,45 +57,17 @@
   height: 550px;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 8px;
 }
 
 /* Pagination Button Styles */
 .button {
-  background-color: #d6c065;
-  border: 2px solid #422800;
-  width: 100px;
-  border-radius: 30px;
-  box-shadow: 4px 4px 0 0 #422800;
-  color: #423800;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin-right: 10px;
-  z-index: 2;
+  margin-top: 5px !important;
+  border-radius: 8px !important;
 }
 
 /* Buttons Container Styles */
 .buttons-container {
   position: sticky;
-  bottom: 2px;
-  padding: 10px;
-}
-
-/* Button Hover Effect */
-.button:hover {
-  background-color: #fff;
-}
-
-/* Disabled Button Styles */
-.button:disabled {
-  background-color: #ccc;
-  border: 2px solid #999;
-  color: #999;
-  cursor: not-allowed;
+  bottom: 3px;
 }

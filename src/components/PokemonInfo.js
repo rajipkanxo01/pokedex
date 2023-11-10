@@ -15,32 +15,6 @@ export function PokemonInfo({ pokeId }) {
   );
 
   return (
-    /*
-    <div className="pokemoninfo-container">
-      {isLoading && <p>Loading......</p>} {isError && <p>Error......</p>}
-      {!isLoading && pokemon && (
-        <>
-          { <div className="info-container">
-            <p className="name">{pokemon.name}</p>
-            <p>{pokemon.height}</p>
-            <p>{pokemon.weight}</p>
-          </div>
-          <div className="image-container">
-            <img
-              className="pokemon-image"
-              src={pokemon.sprites.other["official-artwork"].front_default}
-              alt=""
-            />
-          </div> }
-          <div className="image-border"></div>
-          <img className="image-container" src={pokemonPhone} alt="" />
-        </>
-      )}
-    </div>
-*/
-    /*
-    added comment */
-
     <div className="pokemoninfo-container">
       {isLoading && <p>Loading......</p>} {isError && <p>Error......</p>}
       {!isLoading && pokemon && (

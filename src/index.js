@@ -38,9 +38,7 @@ function Body({ pokemonId, handleCardClick }) {
   return (
     <div className="body">
       <PokemonInfo pokeId={pokemonId} />
-      <div className="sidebar">
-        <Sidebar handleClick={handleCardClick} />
-      </div>
+      <Sidebar handleClick={handleCardClick} />
     </div>
   );
 }
