@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import "../css/index.css";
-import { Root } from "../routes/Root.js";
 import { Sidebar } from "../components/PokemonSidebar";
 import { PokemonInfo } from "../components/PokemonInfo";
 import Background from "../components/Background.js";
