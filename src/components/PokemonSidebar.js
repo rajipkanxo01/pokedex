@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Stack from "@mui/material/Stack";
+import bracelet from "../images/bracelet.png";
 
 export function Sidebar({ handleClick }) {
   const [currentPage, setCurrentPage] = useState(1);

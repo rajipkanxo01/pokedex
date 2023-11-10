@@ -25,7 +25,7 @@
 
 /* Navigation Link */
 .nav-link {
-  background-color: white;
+  /* background-color: white; */
   height: 50px;
   width: 75px;
   border-radius: 4px;
@@ -34,28 +34,30 @@
   gap: 10px;
   padding-right: 3px;
   padding-left: 5px;
+  z-index: 4;
+  margin-right: 40px;
 }
 
 /* Navigation Link Text */
 .nav-link>a {
   text-decoration: none;
-  color: rgb(61, 51, 51);
+  color: #E1F5F9;
   text-align: center;
   font-size: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Pokemon Images */
 .navbar-pokemon-image {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 2px;
-  right: 110px;
-}
-
-/* Bulbasaur Position */
-.bulbasaur {
-  right: 15px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
 }
 
 /* Pokemon Image Animation on Hover */
@@ -64,6 +66,20 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+
+.link-background {
+  right: 150px;
+  top: 20px;
+  position: absolute;
+  background: #0B323C;
+  border-radius: 18px;
+  width: 115px;
+  height: 45px;
+  z-index: 0;
+  transition: 0.4s cubic-bezier(0.7, 0, 0.38, 0.86) all;
+}
+
 
 /* Keyframes */
 @keyframes pokemon_animation {
