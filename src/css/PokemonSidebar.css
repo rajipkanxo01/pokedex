@@ -17,6 +17,7 @@
 /* Poke Card */
 .poke-card {
   height: 70px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +47,8 @@
 
 /* Container and Pokemon List Styles */
 .container {
-  width: 400px;
+  width: 25vw;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   row-gap: 3px;
@@ -54,22 +56,22 @@
 
 .pokemon-list {
   overflow-y: scroll;
-  height: 550px;
+  height: 100vh;
+  width: vw;
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 1vh;
 }
 
 /* Pagination Button Styles */
 .button {
-  margin-top: 5px !important;
+  margin-top: 0.8vh !important;
   border-radius: 8px !important;
 }
 
 /* Buttons Container Styles */
 .buttons-container {
   position: sticky;
-  bottom: 3px;
 }
 
 
@@ -78,10 +80,10 @@
   display: flex;
   color: white;
   flex-direction: row;
-  font-size: 40px;
+  font-size: 30px;
   z-index: 4;
   position: relative;
-  top: 120px;
+  top: 15vh;
 }
 
 .ash-loading {
@@ -91,8 +93,8 @@
 
 .loading-text {
   position: relative;
-  top: 95px;
-  left: 8px;
+  top: 10vh;
+  left: 0.2vw;
   letter-spacing: 4px;
 }
 
