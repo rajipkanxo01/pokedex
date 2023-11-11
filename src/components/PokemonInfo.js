@@ -1,8 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import Color from "color-thief-react";
 import "../css/PokemonInfo.css";
 import pokemonPhone from "../images/pokephone.png";
+import theme_song from "../audios/pokemon_theme_song.mp3";
 
 export function PokemonInfo({ pokeId }) {
   // Fetch Pokemon data using react-query
@@ -57,7 +59,7 @@ export function PokemonInfo({ pokeId }) {
               <p className="pokemon-id">#{pokemon.id}</p>
               <p className="pokemon-type">{renderTypes()}</p>
 
-              <PlayPauseButton />
+              <PlayPauseButton pokeId={pokemon.id} />
               <BoxAnimation />
 
               <img className="pokephone-image" src={pokemonPhone} alt="" />
@@ -126,8 +128,22 @@ const BoxAnimation = () => {
 };
 
 // Play Pause Button Component
-const PlayPauseButton = () => {
+const PlayPauseButton = ({ pokeId }) => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audio = new Audio(theme_song);
+
+  useEffect(() => {
+    if (isPlaying) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, [isPlaying, audio]);
 
   function togglePlayPause() {
     setIsPlaying(!isPlaying);
