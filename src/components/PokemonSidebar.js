@@ -61,7 +61,13 @@ export function Sidebar({ handleClick }) {
                   data-pokemon={pokemon.id}
                 >
                   <p className="poke-id">#{pokemon.id}</p>
-                  <img src={pokemon.sprites.front_default} alt="" />
+                  <img
+                    src={
+                      pokemon.sprites.versions["generation-v"]["black-white"]
+                        .animated.front_shiny
+                    }
+                    alt=""
+                  />
                   <p className="poke-name">{pokemon.name}</p>
                 </div>
               )}
