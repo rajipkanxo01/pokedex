@@ -1,21 +1,23 @@
 {
   "files": {
-    "main.css": "/pokedex/static/css/main.8cf05706.css",
-    "main.js": "/pokedex/static/js/main.dddb7ac9.js",
+    "main.css": "/pokedex/static/css/main.fd7b7922.css",
+    "main.js": "/pokedex/static/js/main.fd181f99.js",
+    "static/media/pokemon_theme_song.mp3": "/pokedex/static/media/pokemon_theme_song.a3aa5ac6cbe17578c483.mp3",
     "static/media/21007.png": "/pokedex/static/media/21007.88ebd66fc4eb590a24c8.png",
     "static/media/pokemon-logo-png-1421.png": "/pokedex/static/media/pokemon-logo-png-1421.c0e5afc218768d952af6.png",
-    "static/media/bulbasaur.png": "/pokedex/static/media/bulbasaur.eb0825ae453715fb20c6.png",
-    "static/media/pokephone.png": "/pokedex/static/media/pokephone.cac91306de1d7b91d1f1.png",
+    "static/media/pokephone.png": "/pokedex/static/media/pokephone.49d769d74d6c1d45268b.png",
     "static/media/Ash.png": "/pokedex/static/media/Ash.44e3888fb43c1de39adf.png",
+    "static/media/tornado.png": "/pokedex/static/media/tornado.adddf0391abd82dd6c7e.png",
+    "static/media/pokeball.png": "/pokedex/static/media/pokeball.1e479e0a796e4778a069.png",
     "static/media/Pokemon_Hollow.ttf": "/pokedex/static/media/Pokemon_Hollow.47f77ce9939c5330492b.ttf",
-    "static/media/pikachu_sitting.png": "/pokedex/static/media/pikachu_sitting.c98128de23d73846b862.png",
     "static/media/Pokemon_Solid.ttf": "/pokedex/static/media/Pokemon_Solid.5d60be1f7ff5fcc21fc1.ttf",
+    "static/media/ash-loading.gif": "/pokedex/static/media/ash-loading.b2162cdcbfc16749e155.gif",
     "index.html": "/pokedex/index.html",
-    "main.8cf05706.css.map": "/pokedex/static/css/main.8cf05706.css.map",
-    "main.dddb7ac9.js.map": "/pokedex/static/js/main.dddb7ac9.js.map"
+    "main.fd7b7922.css.map": "/pokedex/static/css/main.fd7b7922.css.map",
+    "main.fd181f99.js.map": "/pokedex/static/js/main.fd181f99.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cf05706.css",
-    "static/js/main.dddb7ac9.js"
+    "static/css/main.fd7b7922.css",
+    "static/js/main.fd181f99.js"
   ]
 }
