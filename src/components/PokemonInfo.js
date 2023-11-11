@@ -62,6 +62,7 @@ export function PokemonInfo({ pokeId }) {
 
               <PlayPauseButton pokeId={pokemon.id} />
               <BoxAnimation />
+              <DPad />
 
               <img className="pokephone-image" src={pokemonPhone} alt="" />
             </>
@@ -157,6 +158,20 @@ const PlayPauseButton = ({ pokeId }) => {
       ) : (
         <span className="play-icon">&#9654;</span>
       )}
+    </div>
+  );
+};
+
+//D-Pad Component
+const DPad = () => {
+  return (
+    <div class="buttons">
+      <div class="d-pad">
+        <div class="button up"></div>
+        {/* <div class="button left"></div> */}
+        {/* <div class="button right"></div> */}
+        <div class="button down"></div>
+      </div>
     </div>
   );
 };

@@ -210,3 +210,123 @@
   color: whitesmoke;
   transform: scale(1.5);
 }
+
+
+/* D-Pad Styling */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: absolute;
+  z-index: 4;
+  top: 15vh;
+  /* left: 20vw; */
+}
+
+.d-pad {
+  font-size: 24px;
+}
+
+.button {
+  width: 30px;
+  height: 35px;
+  border: 2px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  transition: background-color 0.3s ease;
+  background: #585858;
+}
+
+.up {
+  top: 46vh;
+  left: 33vw;
+}
+
+.down {
+  left: 33vw;
+  top: 55.5vh
+}
+
+/* .left {
+  width: 35px;
+  height: 30px;
+  top: 51vh;
+  left: 30.5vw;
+}
+
+.right {
+  width: 35px;
+  height: 30px;
+  top: 51vh;
+  left: 35.2vw;
+} */
+
+.d-pad div:before {
+  content: '';
+  position: relative;
+  width: 0;
+  height: 0;
+  border-radius: 5px;
+  border-style: solid;
+  transition: all 0.25s;
+}
+
+
+.d-pad div:before {
+  transform: translate(-50%, -50%) scale(6);
+  border-width: 0 3px 5px 3px;
+  border-color: transparent transparent #aaa transparent;
+  border-bottom-color: #fff;
+}
+
+.d-pad div.up:before {
+  top: 10%;
+  transform: translateY(-50%) scale(3) rotate(0deg);
+}
+
+.d-pad div.down:before {
+  top: 10%;
+  transform: translateY(-50%) scale(3) rotate(180deg);
+}
+
+/* .d-pad div.right:before {
+  left: 10%;
+  transform: translate(-50%, -50%) scale(3) rotate(90deg);
+}
+
+.d-pad div.left:before {
+  left: 10%;
+  transform: translate(-50%, -50%) scale(3) rotate(270deg);
+} */
+
+
+.button:hover {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-8deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(8deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
