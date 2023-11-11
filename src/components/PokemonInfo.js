@@ -6,8 +6,8 @@ import "../css/PokemonInfo.css";
 import pokemonPhone from "../images/pokephone.png";
 import theme_song from "../audios/pokemon_theme_song.mp3";
 
+// PokemonInfo Component
 export function PokemonInfo({ pokeId }) {
-  // Fetch Pokemon data using react-query
   const {
     data: pokemon,
     isLoading,
@@ -16,7 +16,7 @@ export function PokemonInfo({ pokeId }) {
     pokeId > 0 ? fetchPokemon(pokeId) : null
   );
 
-  // Render types in a comma-separated list
+  // Function to render comma-separated list of types
   const renderTypes = () => {
     return pokemon.types.map((typeData, index) => (
       <p key={index}>
@@ -26,10 +26,10 @@ export function PokemonInfo({ pokeId }) {
     ));
   };
 
-  // Main component rendering
   return (
     <div className="pokemoninfo-container">
-      {isLoading && <p>Loading......</p>} {isError && <p>Error......</p>}
+      {isLoading && <p>Loading...</p>}
+      {isError && <p>Error...</p>}
       {!isLoading && pokemon && (
         <Color
           src={pokemon.sprites.front_default}
@@ -39,7 +39,6 @@ export function PokemonInfo({ pokeId }) {
         >
           {({ data: colourData }) => (
             <>
-              {/* Pokemon image with color border */}
               <div
                 style={{ background: `${colourData}` }}
                 className="image-border"
@@ -51,7 +50,9 @@ export function PokemonInfo({ pokeId }) {
                 />
               </div>
 
-              <p className="pokemon-name">{pokemon.name}</p>
+              <div className="pokemon-name">
+                <p>{pokemon.name}</p>
+              </div>
 
               <BasicStats pokemon={pokemon} />
               <MovesContainer pokemon={pokemon} />
@@ -71,7 +72,7 @@ export function PokemonInfo({ pokeId }) {
   );
 }
 
-// Render Basic Stats Component
+// BasicStats Component
 const BasicStats = ({ pokemon }) => {
   const renderAbilities = () => {
     return pokemon.abilities.map((ability, index) => (
@@ -92,12 +93,10 @@ const BasicStats = ({ pokemon }) => {
   );
 };
 
-// MovesContainer component
+// MovesContainer Component
 const MovesContainer = ({ pokemon }) => {
-  // Extract move names from the Pokemon data
   const moves = pokemon.moves.map((move) => move.move.name);
 
-  // Render a container with up to 10 moves
   return (
     <div className="moves-container">
       {Array.from({ length: 10 }).map((_, index) => (
@@ -109,6 +108,7 @@ const MovesContainer = ({ pokemon }) => {
   );
 };
 
+// BoxAnimation Component
 const BoxAnimation = () => {
   const [isBox1, setIsBox1] = useState(true);
 
@@ -119,6 +119,7 @@ const BoxAnimation = () => {
 
     return () => clearInterval(intervalId);
   }, []);
+
   return (
     <div className="box-animation">
       <div className={isBox1 ? "box1" : "box2"}></div>
@@ -127,7 +128,7 @@ const BoxAnimation = () => {
   );
 };
 
-// Play Pause Button Component
+// PlayPauseButton Component
 const PlayPauseButton = ({ pokeId }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audio = new Audio(theme_song);

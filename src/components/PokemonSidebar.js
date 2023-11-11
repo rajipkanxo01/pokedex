@@ -9,27 +9,32 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Stack from "@mui/material/Stack";
 
+// Main Pokemon Sidebar Component
 export function Sidebar({ handleClick }) {
   const [currentPage, setCurrentPage] = useState(1);
   const limit = 25;
   const offset = (currentPage - 1) * limit;
 
+  // Fetch Pokemon data using react-query
   const {
     data: pokemonData,
     isLoading,
     isError,
   } = useQuery(["pokemons", limit, offset], () => fetchPokemons(limit, offset));
 
+  // Event handler for navigating to the previous page
   const handlePrevious = () => {
     if (currentPage > 1) {
       setCurrentPage((prevPage) => prevPage - 1);
     }
   };
 
+  // Event handler for navigating to the next page
   const handleNext = () => {
     setCurrentPage((prevPage) => prevPage + 1);
   };
 
+  // Event handler for clicking on a Pokemon card
   const handlePokeCardClick = (event) => {
     const pokeId = event.currentTarget.getAttribute("data-pokemon");
     handleClick(pokeId);
@@ -38,9 +43,11 @@ export function Sidebar({ handleClick }) {
   return (
     <div className="container">
       <div className="pokemon-list">
+        {/* Loading and error handling */}
         {isLoading && <Loading />}
         {isError && <p>Error loading data</p>}
 
+        {/* Render Pokemon cards */}
         {!isLoading &&
           pokemonData &&
           pokemonData.map((pokemon) => (
@@ -74,6 +81,7 @@ export function Sidebar({ handleClick }) {
             </Color>
           ))}
       </div>
+      {/* Pagination buttons component */}
       <PaginationButtons
         handlePrevious={handlePrevious}
         handleNext={handleNext}
@@ -83,10 +91,12 @@ export function Sidebar({ handleClick }) {
   );
 }
 
+// Pagination Buttons Component
 function PaginationButtons({ handlePrevious, handleNext, currentPage }) {
   return (
     <div className="buttons_container">
-      <Stack direction="row" spacing={25}>
+      <Stack direction="row" spacing={30}>
+        {/* Previous page button */}
         <Button
           variant="contained"
           startIcon={<ArrowBackIcon />}
@@ -97,6 +107,7 @@ function PaginationButtons({ handlePrevious, handleNext, currentPage }) {
         >
           Prev
         </Button>
+        {/* Next page button */}
         <Button
           variant="contained"
           endIcon={<ArrowForwardIcon />}
@@ -110,6 +121,7 @@ function PaginationButtons({ handlePrevious, handleNext, currentPage }) {
   );
 }
 
+// Loading Component
 function Loading() {
   return (
     <div className="loading-container">
@@ -121,6 +133,7 @@ function Loading() {
   );
 }
 
+// Function to fetch Pokemon data
 async function fetchPokemons(limit, offset) {
   const url = `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`;
   const response = await fetch(url);

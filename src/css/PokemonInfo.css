@@ -1,5 +1,7 @@
+/* Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* Pokemon Info Container */
 .pokemoninfo-container {
   flex: 1;
   z-index: 3;
@@ -10,148 +12,182 @@
   font-family: 'Press Start 2P', cursive;
 }
 
+/* Pokemon Image */
 .pokemoninfo-container>img {
-  width: 72%;
+  width: 55vw;
+  height: 90vh;
   position: relative;
-  left: 20%;
+  left: 12vw;
   z-index: 3;
 }
 
+/* Image Border */
 .image-border {
   border: 2px solid black;
   border-radius: 3px;
   position: absolute;
-  height: 190px;
-  width: 300px;
-  bottom: 265px;
-  left: 280px;
+  height: 28vh;
+  width: 20vw;
+  bottom: 38.2vh;
+  left: 15.5vw;
   z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Pokemon Image within Image Border */
 .pokemon-image {
   transform: scale(0.4);
   position: relative;
-  top: -145px;
-  left: -80px;
+  height: 75vh;
+  width: 50vw;
 }
 
+/* Pokemon Name */
 .pokemon-name {
   position: absolute;
-  top: 56%;
-  left: 29%;
+  height: 4vh;
+  width: 10vw;
+  top: 53vh;
+  left: 20vw;
   z-index: 4;
-  font-size: 20px;
+  font-size: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Pokemon Name Text */
+.pokemon-name>p {
+  font-size: 0.7em;
+}
+
+/* Basic Stats Container */
 .basic-stats {
   position: absolute;
   z-index: 4;
   left: 58%;
   top: 20%;
-  width: 350px;
-  height: 110px;
+  width: 24vw;
+  height: 13vh;
   background-color: #d7d7d7;
   border: 2px solid black;
   border-radius: 5px;
   padding: 2px;
-
+  overflow: hidden;
 }
 
+/* Basic Stats Text */
 .basic-stats>p {
-  font-size: 11px;
+  font-size: 1.5vh;
+  max-height: 100%;
+  margin: 2;
 }
 
+/* Pokephone Image */
 .pokephone-image {
-  left: 20px;
-  bottom: 20px;
+  left: 2vw;
+  bottom: 3vh;
   z-index: 2;
   transform: scale(1);
 }
 
-
+/* Moves Container */
 .moves-container {
   position: absolute;
   display: grid;
+  height: 18vh;
+  width: 23vw;
   grid-template-columns: repeat(5, auto);
   grid-template-rows: auto auto;
   gap: 10px;
   z-index: 4;
-  top: 40%;
-  left: 60%;
+  top: 34vh;
+  left: 41.5vw;
 }
 
+/* Move Box */
 .box {
-  width: 52px;
-  height: 53px;
+  width: 85%;
+  height: 85%;
   background-color: #76a1ec;
   border: 2px solid black;
   border-radius: 5px;
   overflow: hidden;
 }
 
+/* Move Box Text */
 .box>p {
   padding-top: 1px;
   padding-left: 1px;
   font-size: 10px;
 }
 
+/* Pokemon ID */
 .pokemon-id {
   position: absolute;
   z-index: 4;
-  top: 85%;
-  left: 62%;
-  font-size: 16px;
+  top: 75vh;
+  left: 44vw;
+  font-size: 3vh;
+  width: 13vw;
+  height: 6vh;
 }
 
+/* Pokemon Type */
 .pokemon-type {
   position: absolute;
   z-index: 4;
   font-size: 12px;
-  top: 83%;
-  left: 78%;
+  top: 74.5vh;
+  left: 52vw;
   background-color: #d7d7d7;
   border: 2px solid black;
-  width: 140px;
-  height: 40px;
+  width: 13vw;
+  height: 6vh;
   border-radius: 5px;
   padding-left: 3px;
   overflow: hidden;
 }
 
+/* Pokemon Type Text */
 .pokemon-type>p {
   display: inline-block;
 }
 
-
-/* box animation styling */
+/* Box Animation Container */
 .box-animation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 132px;
+  width: 10vw;
+  height: 2vh;
   position: absolute;
-  bottom: 136px;
-  left: 30%;
+  bottom: 20vh;
+  left: 20vw;
   z-index: 5;
 }
 
+/* Box Animation Box */
 .box-animation>div {
-  height: 10px;
-  width: 62px;
+  height: 2vh;
+  width: 4vw;
   border: 1px solid black;
-  border-radius: 10px
+  border-radius: 10px;
 }
 
+/* Box 1 Animation */
 .box1 {
   background-color: #c60000;
 }
 
+/* Box 2 Animation */
 .box2 {
   background-color: #6a97cb;
-
 }
 
-/* Play/Pause styling */
+/* Play/Pause Container */
 .play-pause-container {
   position: absolute;
   z-index: 4;
@@ -159,17 +195,18 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  height: 50px;
-  width: 50px;
+  height: 8vh;
+  width: 4vw;
   border-radius: 50%;
   background-color: #464646;
-  bottom: 115px;
-  left: 265px;
+  bottom: 16.5vh;
+  left: 15vw;
   border-radius: 1px solid black;
 }
 
+/* Play/Pause Icons */
 .play-icon,
 .pause-icon {
-  font-size: 24px;
   color: whitesmoke;
+  transform: scale(1.5);
 }

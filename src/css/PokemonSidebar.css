@@ -1,4 +1,4 @@
-/* Poke ID and Name */
+/* Poke ID and Name Styles */
 .poke-id {
   font-size: 30px;
   padding: 5px;
@@ -14,10 +14,9 @@
   font-weight: bold;
 }
 
-/* Poke Card */
+/* Poke Card Styles */
 .poke-card {
-  height: 70px;
-
+  height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,7 +46,7 @@
 
 /* Container and Pokemon List Styles */
 .container {
-  width: 25vw;
+  width: 30vw;
   height: 85vh;
   display: flex;
   flex-direction: column;
@@ -72,10 +71,10 @@
 /* Buttons Container Styles */
 .buttons-container {
   position: sticky;
+  width: 70vw !important;
 }
 
-
-/* loading Styles*/
+/* Loading Styles */
 .loading-container {
   display: flex;
   color: white;
@@ -101,7 +100,6 @@
 .loading-text>span {
   animation: blink 1s infinite;
 }
-
 
 @keyframes blink {
 
