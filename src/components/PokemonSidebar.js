@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import Color from "color-thief-react";
 import "../css/PokemonSidebar.css";
+import ash_loading from "../images/ash-loading.gif";
 
 import Button from "@mui/material/Button";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Stack from "@mui/material/Stack";
-import bracelet from "../images/bracelet.png";
 
 export function Sidebar({ handleClick }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,7 +38,7 @@ export function Sidebar({ handleClick }) {
   return (
     <div className="container">
       <div className="pokemon-list">
-        {isLoading && <p>Loading...</p>}
+        {isLoading && <Loading />}
         {isError && <p>Error loading data</p>}
 
         {!isLoading &&
@@ -100,6 +100,17 @@ function PaginationButtons({ handlePrevious, handleNext, currentPage }) {
           Next
         </Button>
       </Stack>
+    </div>
+  );
+}
+
+function Loading() {
+  return (
+    <div className="loading-container">
+      <img src={ash_loading} alt="" className="ash-loading" />
+      <p className="loading-text">
+        Loading <span>...</span>
+      </p>
     </div>
   );
 }

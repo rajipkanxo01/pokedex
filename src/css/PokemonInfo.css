@@ -121,3 +121,55 @@
 .pokemon-type>p {
   display: inline-block;
 }
+
+
+/* box animation styling */
+.box-animation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 132px;
+  position: absolute;
+  bottom: 136px;
+  left: 30%;
+  z-index: 5;
+}
+
+.box-animation>div {
+  height: 10px;
+  width: 62px;
+  border: 1px solid black;
+  border-radius: 10px
+}
+
+.box1 {
+  background-color: #c60000;
+}
+
+.box2 {
+  background-color: #6a97cb;
+
+}
+
+/* Play/Pause styling */
+.play-pause-container {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #464646;
+  bottom: 115px;
+  left: 265px;
+  border-radius: 1px solid black;
+}
+
+.play-icon,
+.pause-icon {
+  font-size: 24px;
+  color: whitesmoke;
+}
