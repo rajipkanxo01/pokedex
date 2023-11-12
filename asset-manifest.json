@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/pokedex/static/css/main.0c4ded65.css",
-    "main.js": "/pokedex/static/js/main.529713c2.js",
+    "main.css": "/pokedex/static/css/main.441d4ef0.css",
+    "main.js": "/pokedex/static/js/main.decab83e.js",
     "static/media/pokemon_theme_song.mp3": "/pokedex/static/media/pokemon_theme_song.a3aa5ac6cbe17578c483.mp3",
     "static/media/21007.png": "/pokedex/static/media/21007.88ebd66fc4eb590a24c8.png",
     "static/media/pokemon-logo-png-1421.png": "/pokedex/static/media/pokemon-logo-png-1421.c0e5afc218768d952af6.png",
-    "static/media/pokephone.png": "/pokedex/static/media/pokephone.49d769d74d6c1d45268b.png",
+    "static/media/pokephone.png": "/pokedex/static/media/pokephone.8f77196a2eb80df6973c.png",
     "static/media/Ash.png": "/pokedex/static/media/Ash.44e3888fb43c1de39adf.png",
     "static/media/tornado.png": "/pokedex/static/media/tornado.adddf0391abd82dd6c7e.png",
     "static/media/pokeball.png": "/pokedex/static/media/pokeball.1e479e0a796e4778a069.png",
@@ -13,11 +13,11 @@
     "static/media/Pokemon_Solid.ttf": "/pokedex/static/media/Pokemon_Solid.5d60be1f7ff5fcc21fc1.ttf",
     "static/media/ash-loading.gif": "/pokedex/static/media/ash-loading.b2162cdcbfc16749e155.gif",
     "index.html": "/pokedex/index.html",
-    "main.0c4ded65.css.map": "/pokedex/static/css/main.0c4ded65.css.map",
-    "main.529713c2.js.map": "/pokedex/static/js/main.529713c2.js.map"
+    "main.441d4ef0.css.map": "/pokedex/static/css/main.441d4ef0.css.map",
+    "main.decab83e.js.map": "/pokedex/static/js/main.decab83e.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c4ded65.css",
-    "static/js/main.529713c2.js"
+    "static/css/main.441d4ef0.css",
+    "static/js/main.decab83e.js"
   ]
 }
